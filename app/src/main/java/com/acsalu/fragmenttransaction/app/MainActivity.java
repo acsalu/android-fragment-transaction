@@ -30,6 +30,8 @@ public class MainActivity extends Activity {
 
         // Find views.
         mButton = (Button) findViewById(R.id.button_switch);
+
+        // If you load fragment with xml file, transaction behavior would be wierd.
         fragmentOne = new FragmentOne();
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.fragment_container, fragmentOne);
